@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("dock-api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b87e5e33ab75a8d5a0888defa45c199c296b5f9b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7ffaa7a3be58890937135f03439ac427543d7084")]
 [assembly: System.Reflection.AssemblyProductAttribute("dock-api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("dock-api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

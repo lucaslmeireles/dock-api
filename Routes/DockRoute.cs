@@ -45,7 +45,15 @@ public static class DockRoute
              dock.SetInactive();
              await context.SaveChangesAsync();
              return Results.Ok(dock);
-         })
+         });
+        route.MapPost("/{id:guid}/checkin",
+        async (TruckOnDockRequest req, Guid id, DockContext context) =>
+        {
+            var truckOnDock = new TruckOnDock(req.truckId, id, req.slot);
+            await context.AddAsync(truckOnDock);
+            await context.SaveChangesAsync();
+            return Results.Created($"/dock/{id}/checkin", truckOnDock);
+        });
 
     }
 

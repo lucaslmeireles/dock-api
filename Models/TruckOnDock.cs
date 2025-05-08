@@ -15,4 +15,9 @@ public class TruckOnDock
     public DateTime ArrivalTime { get; private set; } = DateTime.UtcNow;
     public DateTime DepartureTime { get; private set; }
     public int Slot { get; private set; }
+
+    public void SetDepartureTime(DateTime departureTime)
+    {
+        DepartureTime = departureTime;
+    }
 }

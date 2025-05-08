@@ -1,0 +1,1 @@
+public record TruckOnDockRequest(Guid truckId, int slot);
