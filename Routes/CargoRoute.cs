@@ -21,6 +21,7 @@ public static class CargoRoute
         async (CargoRequest req, DockContext context) =>
         {
             var cargo = new Cargo(req.productName, req.receiptNumber, req.supplier);
+            cargo.LoadOrUnload(req.truckId);
             await context.AddAsync(cargo);
             await context.SaveChangesAsync();
             return Results.Created($"/cargo/{cargo.Id}", cargo);
@@ -35,5 +36,7 @@ public static class CargoRoute
             }
             return Results.Ok(cargo);
         });
+
+
     }
 }

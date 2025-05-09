@@ -1,3 +1,3 @@
-public record CargoRequest(string productName, string receiptNumber, string supplier)
+public record CargoRequest(string productName, string receiptNumber, string supplier, Guid truckId)
 {
 }

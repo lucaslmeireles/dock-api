@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "GpYLBWShygmsQhNZ8CoDLr4SQ+r5BzEuGS+c2DxTrDs=",
+  "Hash": "gb7clipBhiKFSLRawqTT7zWiLBvVvjeZgqFCZSeDXuI=",
   "Source": "dock-api",
   "BasePath": "_content/dock-api",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

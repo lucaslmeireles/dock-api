@@ -21,5 +21,17 @@ public static class TruckRoute
             await context.SaveChangesAsync();
             return Results.Created($"/truck/{truck.Id}", truck);
         });
+        route.MapGet("/{id:guid}", async (Guid id, DockContext context) =>
+        {
+            var truck = await context.Truck.FirstOrDefaultAsync(x => x.Id == id);
+
+            if (truck == null)
+            {
+                return Results.NotFound();
+            }
+            ;
+            return Results.Ok(truck);
+
+        });
     }
 }

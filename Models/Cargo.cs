@@ -13,5 +13,12 @@ public class Cargo
     public string Supplier { get; private set; }
 
     public Guid TruckId { get; set; }
-    public Truck Truck { get; set; }
+
+    public int quantity { get; private set; }
+
+    public bool IsLoad {  get; private set; }
+    public void LoadOrUnload(Guid truckId)
+    {
+        TruckId = truckId;
+    }
 }
