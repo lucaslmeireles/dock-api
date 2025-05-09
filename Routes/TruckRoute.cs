@@ -23,8 +23,9 @@ public static class TruckRoute
         });
         route.MapGet("/{id:guid}", async (Guid id, DockContext context) =>
         {
-            var truck = await context.Truck.FirstOrDefaultAsync(x => x.Id == id);
-
+            var truck = await context.Truck
+            .Include(t => t.Cargo)
+            .FirstOrDefaultAsync(x => x.Id == id);
             if (truck == null)
             {
                 return Results.NotFound();

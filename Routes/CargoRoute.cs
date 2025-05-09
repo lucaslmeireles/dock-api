@@ -20,7 +20,7 @@ public static class CargoRoute
         route.MapPost("",
         async (CargoRequest req, DockContext context) =>
         {
-            var cargo = new Cargo(req.productName, req.receiptNumber, req.supplier);
+            var cargo = new Cargo(req.productName, req.receiptNumber, req.supplier, req.quantity, req.isLoad);
             cargo.LoadOrUnload(req.truckId);
             await context.AddAsync(cargo);
             await context.SaveChangesAsync();

@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace dock_api.Migrations
 {
     [DbContext(typeof(DockContext))]
-    [Migration("20250508132030_Initial")]
-    partial class Initial
+    [Migration("20250509114836_InitialDatabaseSchema")]
+    partial class InitialDatabaseSchema
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,9 +25,15 @@ namespace dock_api.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
+                    b.Property<bool>("IsLoad")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("ProductName")
                         .IsRequired()
                         .HasColumnType("TEXT");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("ReceiptNumber")
                         .IsRequired()

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace dock_api.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class InitialDatabaseSchema : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -45,7 +45,9 @@ namespace dock_api.Migrations
                     ProductName = table.Column<string>(type: "TEXT", nullable: false),
                     ReceiptNumber = table.Column<string>(type: "TEXT", nullable: false),
                     Supplier = table.Column<string>(type: "TEXT", nullable: false),
-                    TruckId = table.Column<Guid>(type: "TEXT", nullable: false)
+                    TruckId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    Quantity = table.Column<int>(type: "INTEGER", nullable: false),
+                    IsLoad = table.Column<bool>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
