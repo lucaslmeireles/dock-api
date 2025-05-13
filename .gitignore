@@ -1,2 +1,4 @@
-.debug
-.bin
+debug
+bin
+obj
+.vs

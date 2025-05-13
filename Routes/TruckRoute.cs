@@ -34,5 +34,43 @@ public static class TruckRoute
             return Results.Ok(truck);
 
         });
+        route.MapGet("/{id:guid}/history", async (Guid id, DockContext context) =>
+        {
+            var truckOnDock = await context.truckOnDocks.FirstOrDefaultAsync(x => x.TruckId == id);
+            if (truckOnDock == null)
+            {
+                return Results.NotFound("Truck not on dock");
+            }
+            ;
+
+            return Results.Ok(truckOnDock);
+
+        });
+        route.MapDelete("/{id:guid}", async (Guid Id, DockContext context) =>
+        {
+            var truck = await context.Truck.FirstOrDefaultAsync(x => x.Id == Id);
+            if (truck == null)
+            {
+                return Results.NotFound();
+            }
+            ;
+            context.Remove(truck);
+            await context.SaveChangesAsync();
+            return Results.Ok("Truck deleted");
+        });
+        route.MapPatch("/{id:guid}", async (Guid id, TruckRequest req, DockContext context) =>
+        {
+            var truck = await context.Truck.FirstOrDefaultAsync(x => x.Id == id);
+            if (truck == null)
+            {
+                return Results.NotFound();
+            }
+            ;
+            truck.DriverName = req.driverName;
+            truck.CarrieName = req.carrieName;
+            await context.SaveChangesAsync();
+            return Results.Ok(truck);
+        })
+
     }
 }
