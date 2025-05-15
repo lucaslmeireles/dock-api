@@ -10,9 +10,11 @@ public class DockContext : DbContext
     //TODO Remover essa referencia
     public DbSet<TruckOnDock> truckOnDocks { get; set; }
 
+    public string connectionString = Environment.GetEnvironmentVariable("DB_URL") ?? "postgres://yourusername:yourpassword@localhost:5432/dock";
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlite("Data Source=dock.sqlite");
+        optionsBuilder.UseNpgsql(connectionString);
         base.OnConfiguring(optionsBuilder);
     }
 }

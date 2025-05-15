@@ -1,4 +1,5 @@
 debug
 bin
-obj
+./obj
 .vs
+.env

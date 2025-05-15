@@ -16,7 +16,7 @@ public static class TruckRoute
         });
         route.MapPost("", async (TruckRequest req, DockContext context) =>
         {
-            var truck = new Truck(req.driverName, req.carrieName);
+            var truck = new Truck(req.driverName, req.carrierName);
             await context.AddAsync(truck);
             await context.SaveChangesAsync();
             return Results.Created($"/truck/{truck.Id}", truck);
@@ -66,11 +66,11 @@ public static class TruckRoute
                 return Results.NotFound();
             }
             ;
-            truck.DriverName = req.driverName;
-            truck.CarrieName = req.carrieName;
+            truck.ChangeDriverName(req.driverName);
+            truck.ChangeCarrierName(req.carrierName);
             await context.SaveChangesAsync();
             return Results.Ok(truck);
-        })
+        });
 
     }
 }

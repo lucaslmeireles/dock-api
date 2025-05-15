@@ -1,2 +1,2 @@
-public record TruckRequest(string driverName, string carrieName);
+public record TruckRequest(string driverName, string carrierName);
 

@@ -47,11 +47,11 @@ public static class DockRoute
              return Results.Ok(dock);
          });
         route.MapPost("/{dockId:guid}/check-in/{truckId:guid}",
-        async (Guid dockId, Guid truckId, DockContext context) =>
+        async (Guid dockId, Guid truckId, DockContext context, TruckOnDockRequest req) =>
         {
             var trucks = await context.truckOnDocks.Where(d => d.DockId == dockId && d.TruckId == truckId).ToListAsync();
             var dock = await context.Dock.FirstOrDefaultAsync(d => d.Id == dockId);
-            var truckOnDock = new TruckOnDock(req.truckId, dockId, req.slot);
+            var truckOnDock = new TruckOnDock(truckId, dockId, req.slot);
             if (trucks.Any(t => t.TruckId == truckId))
             {
                 return Results.Conflict("Truck already checked in");
