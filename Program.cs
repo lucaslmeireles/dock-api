@@ -27,7 +27,7 @@ if (app.Environment.IsDevelopment())
 }
 
 // app.UseHttpsRedirection();
-
+app.UseCors("AllowNuxt");
 app.DockRoutes();
 app.TruckRoutes();
 app.CargoRoutes();

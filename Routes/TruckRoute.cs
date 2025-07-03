@@ -43,6 +43,6 @@ public static class TruckRoute
                 context.Entry(truck).State = EntityState.Deleted;
                 await context.SaveChangesAsync();
                 return Results.Ok("Truck deleted");
-        });
+            });
     }
 }

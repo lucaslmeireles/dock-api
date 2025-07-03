@@ -5,6 +5,30 @@
     {
       "AbsoluteMoniker": "D:0:0:{146F95EB-2461-FCB2-15BE-62FD7FCA56ED}|dock-api.csproj|c:\\doclucas\\dock-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{146F95EB-2461-FCB2-15BE-62FD7FCA56ED}|dock-api.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{146F95EB-2461-FCB2-15BE-62FD7FCA56ED}|dock-api.csproj|c:\\doclucas\\dock-api\\routes\\cargoroute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{146F95EB-2461-FCB2-15BE-62FD7FCA56ED}|dock-api.csproj|solutionrelative:routes\\cargoroute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{146F95EB-2461-FCB2-15BE-62FD7FCA56ED}|dock-api.csproj|c:\\doclucas\\dock-api\\routes\\truckroute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{146F95EB-2461-FCB2-15BE-62FD7FCA56ED}|dock-api.csproj|solutionrelative:routes\\truckroute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{146F95EB-2461-FCB2-15BE-62FD7FCA56ED}|dock-api.csproj|c:\\doclucas\\dock-api\\models\\truckrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{146F95EB-2461-FCB2-15BE-62FD7FCA56ED}|dock-api.csproj|solutionrelative:models\\truckrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{146F95EB-2461-FCB2-15BE-62FD7FCA56ED}|dock-api.csproj|c:\\doclucas\\dock-api\\models\\cargorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{146F95EB-2461-FCB2-15BE-62FD7FCA56ED}|dock-api.csproj|solutionrelative:models\\cargorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{146F95EB-2461-FCB2-15BE-62FD7FCA56ED}|dock-api.csproj|c:\\doclucas\\dock-api\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{146F95EB-2461-FCB2-15BE-62FD7FCA56ED}|dock-api.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{146F95EB-2461-FCB2-15BE-62FD7FCA56ED}|dock-api.csproj|c:\\doclucas\\dock-api\\models\\cargo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{146F95EB-2461-FCB2-15BE-62FD7FCA56ED}|dock-api.csproj|solutionrelative:models\\cargo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +38,81 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\DocLucas\\dock-api\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "C:\\DocLucas\\dock-api\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-10T21:04:16.813Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CargoRequest.cs",
+              "DocumentMoniker": "C:\\DocLucas\\dock-api\\Models\\CargoRequest.cs",
+              "RelativeDocumentMoniker": "Models\\CargoRequest.cs",
+              "ToolTip": "C:\\DocLucas\\dock-api\\Models\\CargoRequest.cs",
+              "RelativeToolTip": "Models\\CargoRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T00:46:16.604Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CargoRoute.cs",
+              "DocumentMoniker": "C:\\DocLucas\\dock-api\\Routes\\CargoRoute.cs",
+              "RelativeDocumentMoniker": "Routes\\CargoRoute.cs",
+              "ToolTip": "C:\\DocLucas\\dock-api\\Routes\\CargoRoute.cs",
+              "RelativeToolTip": "Routes\\CargoRoute.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwCsAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T00:45:58.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TruckRequest.cs",
+              "DocumentMoniker": "C:\\DocLucas\\dock-api\\Models\\TruckRequest.cs",
+              "RelativeDocumentMoniker": "Models\\TruckRequest.cs",
+              "ToolTip": "C:\\DocLucas\\dock-api\\Models\\TruckRequest.cs",
+              "RelativeToolTip": "Models\\TruckRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T00:41:17.762Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Cargo.cs",
+              "DocumentMoniker": "C:\\DocLucas\\dock-api\\Models\\Cargo.cs",
+              "RelativeDocumentMoniker": "Models\\Cargo.cs",
+              "ToolTip": "C:\\DocLucas\\dock-api\\Models\\Cargo.cs",
+              "RelativeToolTip": "Models\\Cargo.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBIAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T00:39:58.883Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TruckRoute.cs",
+              "DocumentMoniker": "C:\\DocLucas\\dock-api\\Routes\\TruckRoute.cs",
+              "RelativeDocumentMoniker": "Routes\\TruckRoute.cs",
+              "ToolTip": "C:\\DocLucas\\dock-api\\Routes\\TruckRoute.cs",
+              "RelativeToolTip": "Routes\\TruckRoute.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwC4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T00:36:23.964Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,7 +121,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\DocLucas\\dock-api\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAAB0AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-09T00:26:08.561Z",
               "EditorCaption": ""
