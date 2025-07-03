@@ -11,4 +11,13 @@ public class Truck
     public string CarrierName { get; private set; }
 
     public ICollection<Cargo> Cargo { get; set; }
+
+    public void ChangeDriverName(string driverName)
+    {
+        DriverName = driverName;
+    }
+    public void ChangeCarrierName(string carrierName)
+    {
+        CarrierName = carrierName;
+    }
 }

@@ -16,7 +16,7 @@ public static class TruckRoute
         });
         route.MapPost("", async (TruckRequest req, DockContext context) =>
         {
-            var truck = new Truck(req.driverName, req.carrieName);
+            var truck = new Truck(req.driverName, req.carrierName);
             await context.AddAsync(truck);
             await context.SaveChangesAsync();
             return Results.Created($"/truck/{truck.Id}", truck);
@@ -33,16 +33,43 @@ public static class TruckRoute
             ;
             return Results.Ok(truck);
         });
-        route.MapDelete("/{id:guid}", async (Guid id, DockContext context) =>
+        route.MapGet("/{id:guid}/history", async (Guid id, DockContext context) =>
+        {
+            var truckOnDock = await context.truckOnDocks.FirstOrDefaultAsync(x => x.TruckId == id);
+            if (truckOnDock == null)
             {
-                var truck = await context.Truck.FirstOrDefaultAsync(t => t.Id == id);
-                if (truck is null)
-                {
-                    return Results.NotFound("Truck not found");
-                }
-                context.Entry(truck).State = EntityState.Deleted;
-                await context.SaveChangesAsync();
-                return Results.Ok("Truck deleted");
-            });
+                return Results.NotFound("Truck not on dock");
+            }
+            ;
+
+            return Results.Ok(truckOnDock);
+
+        });
+        route.MapDelete("/{id:guid}", async (Guid Id, DockContext context) =>
+        {
+            var truck = await context.Truck.FirstOrDefaultAsync(x => x.Id == Id);
+            if (truck == null)
+            {
+                return Results.NotFound();
+            }
+            ;
+            context.Remove(truck);
+            await context.SaveChangesAsync();
+            return Results.Ok("Truck deleted");
+        });
+        route.MapPatch("/{id:guid}", async (Guid id, TruckRequest req, DockContext context) =>
+        {
+            var truck = await context.Truck.FirstOrDefaultAsync(x => x.Id == id);
+            if (truck == null)
+            {
+                return Results.NotFound();
+            }
+            ;
+            truck.ChangeDriverName(req.driverName);
+            truck.ChangeCarrierName(req.carrierName);
+            await context.SaveChangesAsync();
+            return Results.Ok(truck);
+        });
+
     }
 }

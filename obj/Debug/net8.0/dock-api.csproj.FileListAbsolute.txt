@@ -315,6 +315,7 @@ C:/DocLucas/dock-api/obj/Debug/net8.0/staticwebassets.build.endpoints.json
 C:/DocLucas/dock-api/obj/Debug/net8.0/dock-api.csproj.Up2Date
 C:/DocLucas/dock-api/obj/Debug/net8.0/dock-api.genruntimeconfig.cache
 C:/DocLucas/dock-api/obj/Debug/net8.0/ref/dock-api.dll
+<<<<<<< HEAD
 C:\DocLucas\dock-api\bin\Debug\net8.0\appsettings.Development.json
 C:\DocLucas\dock-api\bin\Debug\net8.0\appsettings.json
 C:\DocLucas\dock-api\bin\Debug\net8.0\dock-api.staticwebassets.endpoints.json
@@ -473,3 +474,7 @@ C:\DocLucas\dock-api\obj\Debug\net8.0\dock-api.pdb
 C:\DocLucas\dock-api\obj\Debug\net8.0\dock-api.genruntimeconfig.cache
 C:\DocLucas\dock-api\obj\Debug\net8.0\ref\dock-api.dll
 C:\DocLucas\dock-api\obj\Debug\net8.0\staticwebassets.build.json.cache
+=======
+/workspaces/dock-api/bin/Debug/net8.0/Npgsql.dll
+/workspaces/dock-api/bin/Debug/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+>>>>>>> 86ab03084a57e204bcd60ebe6e3ee882c5bd2843
