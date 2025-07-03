@@ -32,7 +32,17 @@ public static class TruckRoute
             }
             ;
             return Results.Ok(truck);
-
+        });
+        route.MapDelete("/{id:guid}", async (Guid id, DockContext context) =>
+            {
+                var truck = await context.Truck.FirstOrDefaultAsync(t => t.Id == id);
+                if (truck is null)
+                {
+                    return Results.NotFound("Truck not found");
+                }
+                context.Entry(truck).State = EntityState.Deleted;
+                await context.SaveChangesAsync();
+                return Results.Ok("Truck deleted");
         });
     }
 }

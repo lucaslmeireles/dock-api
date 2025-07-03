@@ -8,6 +8,15 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<DockContext>();
 builder.Services.Configure<Microsoft.AspNetCore.Http.Json.JsonOptions>(options => options.SerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowNuxt", builder =>
+    {
+        builder.WithOrigins("http://localhost:3000")  // Your Nuxt app's URL
+               .AllowAnyHeader()
+               .AllowAnyMethod();
+    });
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

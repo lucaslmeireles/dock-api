@@ -36,7 +36,19 @@ public static class CargoRoute
             }
             return Results.Ok(cargo);
         });
+        route.MapDelete("/{id:guid}",
+            async (Guid id, DockContext context) =>
+        {
+            var cargo = await context.Cargo.FirstOrDefaultAsync(x => x.Id == id);
+            if (cargo == null)
+            {
+                return Results.NotFound();
+            }
+            context.Remove(cargo);
+            await context.SaveChangesAsync();
+            return Results.Ok("Cargo removed");
 
+        });
 
     }
 }
