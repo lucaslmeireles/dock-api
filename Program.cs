@@ -8,6 +8,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<DockContext>();
 builder.Services.Configure<Microsoft.AspNetCore.Http.Json.JsonOptions>(options => options.SerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+builder.WebHost.UseUrls("http://0.0.0.0:5000");
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowNuxt", builder =>
