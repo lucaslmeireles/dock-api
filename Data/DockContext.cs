@@ -10,11 +10,11 @@ public class DockContext : DbContext
     //TODO Remover essa referencia
     public DbSet<TruckOnDock> truckOnDocks { get; set; }
 
-    public string connectionString = Environment.GetEnvironmentVariable("DB_URL") ?? "postgres://yourusername:yourpassword@localhost:5432/dock";
+    public string connectionString = Environment.GetEnvironmentVariable("password");
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseNpgsql(connectionString);
+        optionsBuilder.UseNpgsql($"Host=ep-snowy-pond-ac7no5su-pooler.sa-east-1.aws.neon.tech;Database=dock;Username=neondb_owner;Password={connectionString};SSL Mode=Require;Channel Binding=Require");
         base.OnConfiguring(optionsBuilder);
     }
 }

@@ -1,4 +1,9 @@
 using System.Text.Json.Serialization;
+using Microsoft.EntityFrameworkCore;
+using DotNetEnv;
+
+// Load .env file into environment variables
+Env.Load();
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,8 +23,13 @@ builder.Services.AddCors(options =>
                .AllowAnyMethod();
     });
 });
-var app = builder.Build();
 
+var app = builder.Build();
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<DockContext>();
+    db.Database.Migrate();
+}
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

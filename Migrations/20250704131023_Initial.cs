@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace dock_api.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialDatabaseSchema : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -15,9 +15,9 @@ namespace dock_api.Migrations
                 name: "Dock",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
-                    Name = table.Column<string>(type: "TEXT", nullable: false),
-                    Slots = table.Column<int>(type: "INTEGER", nullable: false)
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    Name = table.Column<string>(type: "text", nullable: false),
+                    Slots = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -28,9 +28,9 @@ namespace dock_api.Migrations
                 name: "Truck",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
-                    DriverName = table.Column<string>(type: "TEXT", nullable: false),
-                    CarrierName = table.Column<string>(type: "TEXT", nullable: false)
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    DriverName = table.Column<string>(type: "text", nullable: false),
+                    CarrierName = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -41,13 +41,13 @@ namespace dock_api.Migrations
                 name: "Cargo",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
-                    ProductName = table.Column<string>(type: "TEXT", nullable: false),
-                    ReceiptNumber = table.Column<string>(type: "TEXT", nullable: false),
-                    Supplier = table.Column<string>(type: "TEXT", nullable: false),
-                    TruckId = table.Column<Guid>(type: "TEXT", nullable: false),
-                    Quantity = table.Column<int>(type: "INTEGER", nullable: false),
-                    IsLoad = table.Column<bool>(type: "INTEGER", nullable: false)
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    ProductName = table.Column<string>(type: "text", nullable: false),
+                    ReceiptNumber = table.Column<string>(type: "text", nullable: false),
+                    Supplier = table.Column<string>(type: "text", nullable: false),
+                    TruckId = table.Column<Guid>(type: "uuid", nullable: false),
+                    Quantity = table.Column<int>(type: "integer", nullable: false),
+                    IsLoad = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -64,12 +64,12 @@ namespace dock_api.Migrations
                 name: "truckOnDocks",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
-                    TruckId = table.Column<Guid>(type: "TEXT", nullable: false),
-                    DockId = table.Column<Guid>(type: "TEXT", nullable: false),
-                    ArrivalTime = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    DepartureTime = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    Slot = table.Column<int>(type: "INTEGER", nullable: false)
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    TruckId = table.Column<Guid>(type: "uuid", nullable: false),
+                    DockId = table.Column<Guid>(type: "uuid", nullable: false),
+                    ArrivalTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    DepartureTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    Slot = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
